@@ -1,4 +1,4 @@
-# Lesedatenbank-app
+# Lesedatenbank - Managing read and unread books
 Repository for the Lesedatenbank android app. The server files are available [here](https://github.com/Cameo007/Lesedatenbank-server/).
 
 ## Libraries
