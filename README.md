@@ -34,3 +34,6 @@ Repository for the Lesedatenbank android app. The server files are available [he
     See the License for the specific language governing permissions and
     limitations under the License.
     ```
+- [Androidx](https://github.com/androidx/androidx)
+- [Material Components Android](https://github.com/material-components/material-components-android)
+  ```Apache License 2.0```
