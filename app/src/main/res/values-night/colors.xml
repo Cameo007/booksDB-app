@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="primary">#ff76d1ff</color>
+    <color name="onPrimary">#ff003549</color>
+    <color name="primaryContainer">#ff004c69</color>
+    <color name="onPrimaryContainer">#ffc1e8ff</color>
+    <color name="primaryInverse">#ff00668b</color>
+    <!-- Secondary -->
+    <color name="secondary">#ffb5cad7</color>
+    <color name="onSecondary">#ff20333d</color>
+    <color name="secondaryContainer">#ff374955</color>
+    <color name="onSecondaryContainer">#ffd1e5f4</color>
+    <!-- Tertiary -->
+    <color name="tertiary">#ffcac1ea</color>
+    <color name="onTertiary">#ff322c4c</color>
+    <color name="tertiaryContainer">#ff484264</color>
+    <color name="onTertiaryContainer">#ffe6deff</color>
+</resources>

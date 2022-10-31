@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lesedatenbank</string>
+    <string name="about">Über</string>
+    <string name="licences">Open-Source Lizenzen</string>
+    <string name="changeEndpoint">API-Endpunkt ändern</string>
+    <string name="username">Benutzername</string>
+    <string name="password">Passwort</string>
+    <string name="login">Anmelden</string>
+    <string name="loginTitle">Lesedatenbank - Anmelden</string>
+    <string name="aboutText">Lesedatenbank © by Pascal Dietrich, 2022.</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="apiEndpoint">API-Endpunkt</string>
+    <string name="ok">OK</string>
+    <string name="wrongPassword">Das eingegebene Passwort ist falsch.</string>
+    <string name="logout">Abmelden</string>
+    <string name="register">Registrieren</string>
+    <string name="repeatPassword">Passwort wiederholen</string>
+    <string name="usernameIsAlreadyTaken">Der Benutzername ist leider schon vergeben.</string>
+    <string name="passwordsDontMatch">Die Passwörter stimmen nicht überein.</string>
+    <string name="category">Kategorie</string>
+    <string name="serverCouldntBeReached">Der Server konnte nicht erreicht werden</string>
+    <string name="changeUsername">Benutzername ändern</string>
+    <string name="changePassword">Password ändern</string>
+    <string name="deleteAccount">Konto löschen</string>
+    <string name="name">Name</string>
+    <string name="author">Autor</string>
+    <string name="read">Gelesen</string>
+    <string name="itemHasBeenDeleted">\"%s\" wurde gelöscht.</string>
+    <string name="undo">Rückgängig machen</string>
+    <string name="error">"Fehler: "</string>
+    <string name="delete">Löschen</string>
+    <string name="fabAddBookContentDesc">Buch hinzufügen</string>
+    <string name="introText1">Mit der Lesedatenbank-App können sie ihre gelesenen und noch nicht gelesenen Bücher noch einfacher verwalten! Sie haben Kategorien zB. für verschiedene Autoren oder Genres, die in einer Liste alle Bücher enthalten.</string>
+    <string name="noBooks">Sie haben noch keine Bücher hinzugefügt.</string>
+    <string name="newPassword">Neues Passwort</string>
+    <string name="newUsername">Neuer Benutzername</string>
+    <string name="wantToDeleteAccount">Sind Sie sicher, dass Sie ihr Lesedatenbank-Konto endgültig löschen wollen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="repeatNewPassword">Neues Passwort wiederholen</string>
+    <string name="search">Suchen</string>
+    <string name="noCategories">Sie haben noch keine Kategorien hinzugefügt.</string>
+</resources>

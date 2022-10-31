@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="primary">#ff00668b</color>
+    <color name="onPrimary">@android:color/white</color>
+    <color name="primaryContainer">#ffc1e8ff</color>
+    <color name="onPrimaryContainer">#ff001e2c</color>
+    <color name="primaryInverse">#ff76d1ff</color>
+    <!-- Secondary -->
+    <color name="secondary">#ff4e616c</color>
+    <color name="onSecondary">@android:color/white</color>
+    <color name="secondaryContainer">#ffd1e5f4</color>
+    <color name="onSecondaryContainer">#ff091e28</color>
+    <!-- Tertiary -->
+    <color name="tertiary">#ff605a7c</color>
+    <color name="onTertiary">@android:color/white</color>
+    <color name="tertiaryContainer">#ffe6deff</color>
+    <color name="onTertiaryContainer">#ff1d1736</color>
+</resources>

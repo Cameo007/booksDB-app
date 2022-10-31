@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="primary">@android:color/system_accent1_200</color>
+    <color name="onPrimary">@android:color/system_accent1_800</color>
+    <color name="primaryContainer">@android:color/system_accent1_700</color>
+    <color name="onPrimaryContainer">@android:color/system_accent1_100</color>
+    <color name="primaryInverse">@android:color/system_accent1_600</color>
+    <!-- Secondary -->
+    <color name="secondary">@android:color/system_accent2_200</color>
+    <color name="onSecondary">@android:color/system_accent2_800</color>
+    <color name="secondaryContainer">@android:color/system_accent2_700</color>
+    <color name="onSecondaryContainer">@android:color/system_accent2_100</color>
+    <!-- Tertiary -->
+    <color name="tertiary">@android:color/system_accent3_200</color>
+    <color name="onTertiary">@android:color/system_accent3_800</color>
+    <color name="tertiaryContainer">@android:color/system_accent3_700</color>
+    <color name="onTertiaryContainer">@android:color/system_accent3_100</color>
+</resources>

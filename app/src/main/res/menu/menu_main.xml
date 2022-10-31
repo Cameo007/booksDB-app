@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/about"
+        android:title="@string/about" />
+    <item android:id="@+id/licences"
+        android:title="@string/licences" />
+    <item android:id="@+id/changeEndpointURL"
+        android:title="@string/changeEndpoint" />
+    <item android:id="@+id/logout"
+        android:title="@string/logout" />
+    <item android:id="@+id/changeUsername"
+        android:title="@string/changeUsername" />
+    <item android:id="@+id/changePassword"
+        android:title="@string/changePassword" />
+    <item android:id="@+id/deleteAccount"
+        android:title="@string/deleteAccount" />
+
+    <item
+        android:id="@+id/searchviewBooks"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

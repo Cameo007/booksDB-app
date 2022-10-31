@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Lesedatenbank</string>
+    <string name="about">About</string>
+    <string name="licences">Open source licences</string>
+    <string name="changeEndpoint">Change API Endpoint</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="loginTitle">Lesedatenbank - Login</string>
+    <string name="aboutText">Lesedatenbank © by Pascal Dietrich, 2022.</string>
+    <string name="cancel">Cancel</string>
+    <string name="apiEndpoint">API Endpoint</string>
+    <string name="ok">OK</string>
+    <string name="wrongPassword">The entered password is wrong.</string>
+    <string name="logout">Log out</string>
+    <string name="register">Register</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="repeatPassword">Repeat password</string>
+    <string name="usernameIsAlreadyTaken">Sorry, the username is already taken.</string>
+    <string name="passwordsDontMatch">The passwords do not match.</string>
+    <string name="category">Category</string>
+    <string name="serverCouldntBeReached">The server could not be reached</string>
+    <string name="changeUsername">Change username</string>
+    <string name="changePassword">Change password</string>
+    <string name="deleteAccount">Delete Account</string>
+    <string name="name">Name</string>
+    <string name="author">Author</string>
+    <string name="read">Read</string>
+    <string name="itemHasBeenDeleted">\"%s\" has been deleted.</string>
+    <string name="undo">Undo</string>
+    <string name="error">Error:</string>
+    <string name="delete">Delete</string>
+    <string name="fabAddBookContentDesc">Add book</string>
+    <string name="introText1">With the Lesedatenbank app, you can manage your read and unread books even more easily! You have categories, e.g. for different authors or genres, which contain all books in one list.</string>
+    <string name="introText2">IntroText2 (Kategorien)</string>
+    <string name="introText3">IntroText3 (Bücher)</string>
+    <string name="noBooks">You haven\'t added any books yet.</string>
+    <string name="newPassword">New password</string>
+    <string name="newUsername">New username</string>
+    <string name="wantToDeleteAccount">Are you sure you want to delete your Lesedatenbank account definitively?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="repeatNewPassword">Repeat new password</string>
+    <string name="search">Search</string>
+    <string name="noCategories">You haven\'t added any categories yet.</string>
+</resources>
