@@ -9,20 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKeys;
-
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-
 import org.json.JSONException;
-
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.security.KeyManagementException;
@@ -51,19 +44,7 @@ public class LoginFragment extends Fragment {
             startActivity(loggedIn);
         }
 
-        AutoCompleteTextView usernamePicker = (AutoCompleteTextView) ((TextInputLayout) view.findViewById(R.id.usernamePicker)).getEditText();
-
-        new Thread(() -> {
-            try {
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(context, R.layout.dropdown_item, connection.getUsernames());
-                requireActivity().runOnUiThread(() -> {
-                    Objects.requireNonNull(usernamePicker).setAdapter(arrayAdapter);
-                    usernamePicker.setText(prefs.getString("username", ""), false);
-                });
-            } catch (IOException | KeyManagementException | NoSuchAlgorithmException | JSONException e) {
-                e.printStackTrace();
-            }
-        }).start();
+        TextInputEditText inputUsername = view.findViewById(R.id.inputUsername);
 
         TextInputEditText inputPassword = view.findViewById(R.id.inputPassword);
         inputPassword.requestFocus();
@@ -72,7 +53,7 @@ public class LoginFragment extends Fragment {
 
         Button buttonLogin = view.findViewById(R.id.buttonLogin);
         buttonLogin.setOnClickListener(v -> {
-            String username = Objects.requireNonNull(usernamePicker).getText().toString();
+            String username = Objects.requireNonNull(inputUsername.getText()).toString();
             String password = Objects.requireNonNull(inputPassword.getText()).toString();
 
             new Thread(() -> {

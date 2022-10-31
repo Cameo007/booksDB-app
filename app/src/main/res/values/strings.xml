@@ -43,4 +43,6 @@
     <string name="repeatNewPassword">Repeat new password</string>
     <string name="search">Search</string>
     <string name="noCategories">You haven\'t added any categories yet.</string>
+    <string name="openSource">Open source</string>
+    <string name="openSourceText">This app is open source. The source code is available \u003Ca href=\"https://github.com/Cameo007/Lesedatenbank-app\"\003Ehere\u003C/a\u003E.</string>
 </resources>

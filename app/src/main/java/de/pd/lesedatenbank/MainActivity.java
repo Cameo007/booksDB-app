@@ -3,20 +3,18 @@ package de.pd.lesedatenbank;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
-import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKeys;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.security.keystore.KeyGenParameterSpec;
 import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -223,7 +221,7 @@ public class MainActivity extends AppCompatActivity{
 
             builder.setView(layout);
             builder.setPositiveButton(MainActivity.this.getString(R.string.ok), (dialog1, which) -> {
-                String newCategoryName = inputCategoryName.getText().toString();
+                String newCategoryName = clean(inputCategoryName.getText().toString());
                 new Thread(() -> {
                     try {
                         connection.renameCategory(username, password, oldCategoryName, newCategoryName);
@@ -309,8 +307,8 @@ public class MainActivity extends AppCompatActivity{
             builder.setPositiveButton(MainActivity.this.getString(R.string.ok), (dialog1, which) -> new Thread(() -> {
                 try {
                     String categoryName = categoryPicker.getText().toString();
-                    String bookName = inputBookName.getText().toString();
-                    String author = inputAuthor.getText().toString();
+                    String bookName = clean(inputBookName.getText().toString());
+                    String author = clean(inputAuthor.getText().toString());
                     boolean read = inputRead.isChecked();
 
                     //Add book on server
@@ -389,6 +387,11 @@ public class MainActivity extends AppCompatActivity{
         }).attachToRecyclerView(recyclerviewBooks);
     }
 
+
+    public String clean(String text) {
+        return text.replaceAll("[^A-Za-zŽžÀ-ÿ0-9\\-!§$%/=?°<>|+*~#()\\[\\]{}.:,; ]+", "");
+    }
+
     private void openPrefs() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
             KeyGenParameterSpec keyGenParameterSpec = MasterKeys.AES256_GCM_SPEC;
@@ -421,7 +424,19 @@ public class MainActivity extends AppCompatActivity{
             MaterialAlertDialogBuilder builder;
             LinearLayout layout = new LinearLayout(MainActivity.this);
 
-            if (id == R.id.licences) {
+            if (id == R.id.about) {
+                builder = new MaterialAlertDialogBuilder(MainActivity.this);
+                builder.setMessage(R.string.aboutText).setTitle(R.string.app_name);
+                builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
+                builder.show();
+                return true;
+            } else if (id == R.id.openSource) {
+                builder = new MaterialAlertDialogBuilder(MainActivity.this);
+                builder.setMessage(HtmlCompat.fromHtml(getString(R.string.openSourceText), HtmlCompat.FROM_HTML_MODE_COMPACT)).setTitle(R.string.app_name);
+                builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
+                builder.show();
+                return true;
+            } else if (id == R.id.licences) {
                 new LibsBuilder()
                         .withLicenseShown(true)
                         .withVersionShown(true)
@@ -429,12 +444,6 @@ public class MainActivity extends AppCompatActivity{
                         .withActivityTitle(getString(R.string.licences))
                         .start(MainActivity.this);
 
-                return true;
-            } else if (id == R.id.about) {
-                builder = new MaterialAlertDialogBuilder(MainActivity.this);
-                builder.setMessage(R.string.aboutText).setTitle(R.string.app_name);
-                builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
-                builder.show();
                 return true;
             } else if (id == R.id.changeEndpointURL) {
                 builder = new MaterialAlertDialogBuilder(MainActivity.this);

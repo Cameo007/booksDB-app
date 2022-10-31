@@ -71,48 +71,6 @@ public class Connection {
         }
     }
 
-    public List<String> getUsernames() throws IOException, KeyManagementException, NoSuchAlgorithmException, JSONException {
-        String apiEndpoint = prefs.getString("apiEndpoint", "https://mint/api/lesedatenbank.php");
-        String url = Uri.parse(apiEndpoint)
-                .buildUpon()
-                .appendQueryParameter("cmd", "getUsernames")
-                .build().toString();
-
-        TrustManager[] trustAllCerts = new TrustManager[]{
-                new X509TrustManager() {
-                    @Override
-                    public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) { }
-                    @Override
-                    public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) { }
-                    @Override
-                    public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                        return new java.security.cert.X509Certificate[]{}; }
-                }
-        };
-        SSLContext sslContext = SSLContext.getInstance("SSL");
-        sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        builder.sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustAllCerts[0]);
-        builder.hostnameVerifier((hostname, session) -> true);
-
-        OkHttpClient client = builder.build();
-
-        try (Response response = client.newCall(new Request.Builder().url(url).build()).execute()) {
-            JSONObject body = new JSONObject(Objects.requireNonNull(response.body()).string());
-            if (response.code() == 200) {
-                JSONArray jsonUsernames = body.getJSONArray("content");
-                List<String> usernames = new ArrayList<>();
-                for (int i=0; i < jsonUsernames.length(); i++) {
-                    usernames.add(jsonUsernames.get(i).toString());
-                }
-                return usernames;
-            } else {
-                toast(body.getString("content"));
-                return new ArrayList<>();
-            }
-        }
-    }
-
     public boolean isUsernameAvailable(String username) throws IOException, KeyManagementException, NoSuchAlgorithmException, JSONException {
         String apiEndpoint = prefs.getString("apiEndpoint", "https://mint/api/lesedatenbank.php");
         String url = Uri.parse(apiEndpoint)

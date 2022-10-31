@@ -1,8 +1,8 @@
 package de.pd.lesedatenbank;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.text.HtmlCompat;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKeys;
 import androidx.viewpager2.widget.ViewPager2;
@@ -97,10 +97,21 @@ public class LoginActivity extends AppCompatActivity {
         materialToolbar.setOnMenuItemClickListener(item -> {
             int id = item.getItemId();
             MaterialAlertDialogBuilder builder;
-            AlertDialog dialog;
             LinearLayout layout = new LinearLayout(LoginActivity.this);
 
-            if (id == R.id.licences) {
+            if (id == R.id.about) {
+                builder = new MaterialAlertDialogBuilder(LoginActivity.this);
+                builder.setMessage(R.string.aboutText).setTitle(R.string.app_name);
+                builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
+                builder.show();
+                return true;
+            } else if (id == R.id.openSource) {
+                builder = new MaterialAlertDialogBuilder(LoginActivity.this);
+                builder.setMessage(HtmlCompat.fromHtml(getString(R.string.openSourceText), HtmlCompat.FROM_HTML_MODE_LEGACY)).setTitle(R.string.app_name);
+                builder.setNegativeButton(R.string.cancel, (dialog, which) -> dialog.cancel());
+                builder.show();
+                return true;
+            } else if (id == R.id.licences) {
                 new LibsBuilder()
                         .withLicenseShown(true)
                         .withVersionShown(true)
@@ -108,13 +119,6 @@ public class LoginActivity extends AppCompatActivity {
                         .withActivityTitle(getString(R.string.licences))
                         .start(LoginActivity.this);
 
-                return true;
-            } else if (id == R.id.about) {
-                builder = new MaterialAlertDialogBuilder(LoginActivity.this);
-                builder.setMessage(R.string.aboutText).setTitle(R.string.app_name);
-                builder.setNegativeButton(R.string.cancel, (dialog1, which) -> dialog1.cancel());
-                dialog = builder.create();
-                dialog.show();
                 return true;
             } else if (id == R.id.changeEndpointURL) {
                 builder = new MaterialAlertDialogBuilder(LoginActivity.this);
@@ -129,8 +133,8 @@ public class LoginActivity extends AppCompatActivity {
                 layout.addView(inputApiEndpoint);
 
                 builder.setView(layout);
-                builder.setPositiveButton(getString(R.string.ok), (dialog1, which) -> prefsEditor.putString("apiEndpoint", inputApiEndpoint.getText().toString()).apply());
-                builder.setNegativeButton(getString(R.string.cancel), (dialog1, which) -> dialog1.cancel());
+                builder.setPositiveButton(getString(R.string.ok), (dialog, which) -> prefsEditor.putString("apiEndpoint", inputApiEndpoint.getText().toString()).apply());
+                builder.setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.cancel());
                 builder.show();
                 return true;
             } else {
