@@ -13,6 +13,7 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -39,6 +40,7 @@ public class Connection {
                 .appendQueryParameter("username", username)
                 .appendQueryParameter("password", password)
                 .appendQueryParameter("cmd", "authenticate")
+                .appendQueryParameter("lang", Locale.getDefault().getLanguage())
                 .build().toString();
 
         TrustManager[] trustAllCerts = new TrustManager[]{
@@ -77,6 +79,7 @@ public class Connection {
                 .buildUpon()
                 .appendQueryParameter("username", username)
                 .appendQueryParameter("cmd", "isUsernameAvailable")
+                .appendQueryParameter("lang", Locale.getDefault().getLanguage())
                 .build().toString();
 
         TrustManager[] trustAllCerts = new TrustManager[]{
@@ -135,6 +138,7 @@ public class Connection {
                 .add("username", username)
                 .add("password", password)
                 .add("cmd", "register")
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -175,6 +179,7 @@ public class Connection {
                 .add("password", password)
                 .add("cmd", "changeUsername")
                 .add("newUsername", newUsername)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -215,6 +220,7 @@ public class Connection {
                 .add("password", password)
                 .add("cmd", "changePassword")
                 .add("newPassword", newPassword)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -254,6 +260,7 @@ public class Connection {
                 .add("username", username)
                 .add("password", password)
                 .add("cmd", "deleteAccount")
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -273,6 +280,7 @@ public class Connection {
                 .appendQueryParameter("username", username)
                 .appendQueryParameter("password", password)
                 .appendQueryParameter("cmd", "getCategories")
+                .appendQueryParameter("lang", Locale.getDefault().getLanguage())
                 .build().toString();
 
         TrustManager[] trustAllCerts = new TrustManager[]{
@@ -317,6 +325,7 @@ public class Connection {
                 .appendQueryParameter("password", password)
                 .appendQueryParameter("cmd", "getBooks")
                 .appendQueryParameter("categoryName", categoryName)
+                .appendQueryParameter("lang", Locale.getDefault().getLanguage())
                 .build().toString();
 
         TrustManager[] trustAllCerts = new TrustManager[]{
@@ -381,6 +390,7 @@ public class Connection {
                 .add("password", password)
                 .add("cmd", "addCategory")
                 .add("categoryName", categoryName)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -422,6 +432,7 @@ public class Connection {
                 .add("password", password)
                 .add("cmd", "deleteCategory")
                 .add("categoryName", categoryName)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -464,6 +475,7 @@ public class Connection {
                 .add("cmd", "renameCategory")
                 .add("oldCategoryName", oldCategoryName)
                 .add("newCategoryName", newCategoryName)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -508,6 +520,7 @@ public class Connection {
                 .add("bookName", bookName)
                 .add("author", author)
                 .add("read", read.toString())
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -550,6 +563,7 @@ public class Connection {
                 .add("cmd", "deleteBook")
                 .add("categoryName", categoryName)
                 .add("bookName", bookName)
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
@@ -595,6 +609,7 @@ public class Connection {
                 .add("newBookName", newBookName)
                 .add("author", author)
                 .add("read", read.toString())
+                .add("lang", Locale.getDefault().getLanguage())
                 .build();
 
         Request request = new Request.Builder()
