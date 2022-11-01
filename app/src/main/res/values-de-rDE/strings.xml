@@ -40,7 +40,7 @@
     <string name="no">Nein</string>
     <string name="repeatNewPassword">Neues Passwort wiederholen</string>
     <string name="search">Suchen</string>
-    <string name="noCategories">Sie haben noch keine Kategorien hinzugefügt.</string>
+    <string name="noCategories">Sie haben noch keine Kategorien angelegt.</string>
     <string name="openSource">Open-Source</string>
     <string name="openSourceText">Diese App ist Open Source. Der Quellcode ist \u003Ca href=\"https://github.com/Cameo007/Lesedatenbank-app\"\u003Ehier\u003C/a\u003E verfügbar.</string>
 </resources>
