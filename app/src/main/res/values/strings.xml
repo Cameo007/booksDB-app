@@ -14,7 +14,6 @@
     <string name="wrongPassword">The entered password is wrong.</string>
     <string name="logout">Log out</string>
     <string name="register">Register</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="repeatPassword">Repeat password</string>
     <string name="usernameIsAlreadyTaken">Sorry, the username is already taken.</string>
     <string name="passwordsDontMatch">The passwords do not match.</string>
