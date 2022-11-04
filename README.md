@@ -1,5 +1,5 @@
-# Lesedatenbank - Managing read and unread books
-Repository for the Lesedatenbank android app. The server files are available [here](https://github.com/Cameo007/Lesedatenbank-server/).
+# lDB - Managing read and unread books
+Repository for the lDB android app. The server files are available [here](https://github.com/Cameo007/Lesedatenbank-server/).
 
 ## Libraries
 - [Androidx](https://github.com/androidx/androidx)
@@ -62,7 +62,7 @@ Repository for the Lesedatenbank android app. The server files are available [he
   
 ## License
 ```
-Lesedatenbank - Managing read and unread books
+lDB - Managing read and unread books
 Copyright (C) 2022  Pascal Dietrich
 
 This library is free software; you can redistribute it and/or
