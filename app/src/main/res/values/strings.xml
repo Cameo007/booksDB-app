@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lesedatenbank</string>
+    <string name="app_name">booksDB</string>
     <string name="about">About</string>
     <string name="licences">Open source licences</string>
     <string name="changeEndpoint">Change API Endpoint</string>
@@ -7,7 +7,7 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="loginTitle">Lesedatenbank - Login</string>
-    <string name="aboutText">Lesedatenbank © by Pascal Dietrich, 2022.</string>
+    <string name="aboutText">booksDB © by Pascal Dietrich, 2022.</string>
     <string name="cancel">Cancel</string>
     <string name="apiEndpoint">API Endpoint</string>
     <string name="ok">OK</string>
@@ -30,7 +30,7 @@
     <string name="error">Error:</string>
     <string name="delete">Delete</string>
     <string name="fabAddBookContentDesc">Add book</string>
-    <string name="introText1">With the Lesedatenbank app, you can manage your read and unread books even more easily! You have categories, e.g. for different authors or genres, which contain all books in one list.</string>
+    <string name="introText1">With the booksDB app, you can manage your read and unread books even more easily! You have categories, e.g. for different authors or genres, which contain all books in one list.</string>
     <string name="introText2">IntroText2 (Kategorien)</string>
     <string name="introText3">IntroText3 (Bücher)</string>
     <string name="noBooks">You haven\'t added any books yet.</string>
@@ -43,5 +43,5 @@
     <string name="search">Search</string>
     <string name="noCategories">You haven\'t created any categories yet.</string>
     <string name="openSource">Open source</string>
-    <string name="openSourceText">This app is open source. The source code is available \u003Ca href=\"https://github.com/Cameo007/Lesedatenbank-app\"\u003Ehere\u003C/a\u003E.</string>
+    <string name="openSourceText">This app is open source. The source code is available \\u003Ca href=\"https://github.com/Cameo007/booksDB-app\"\\u003Ehere\\u003C/a\\u003E.</string>
 </resources>

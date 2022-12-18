@@ -16,4 +16,7 @@
     <color name="onTertiary">@android:color/white</color>
     <color name="tertiaryContainer">#ffe6deff</color>
     <color name="onTertiaryContainer">#ff1d1736</color>
+
+    <!-- Special colors -->
+    <color name="darkBlue">#0000CD</color>
 </resources>

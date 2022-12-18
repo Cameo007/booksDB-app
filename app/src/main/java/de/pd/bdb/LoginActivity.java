@@ -1,4 +1,4 @@
-package de.pd.lesedatenbank;
+package de.pd.bdb;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;

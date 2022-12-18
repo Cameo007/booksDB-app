@@ -1,4 +1,4 @@
-package de.pd.lesedatenbank;
+package de.pd.bdb;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -15,7 +15,7 @@ public class Intro extends AppIntro2 {
         sliderPage1.setTitle(getString(R.string.app_name));
         sliderPage1.setDescription(getString(R.string.introText1));
         sliderPage1.setBackgroundColorRes(R.color.primary);
-        sliderPage1.setImageDrawable(R.mipmap.ic_launcher_round_inverted);
+        sliderPage1.setImageDrawable(R.mipmap.ic_launcher_round);
 
         SliderPage sliderPage2 = new SliderPage();
         sliderPage2.setTitle(getString(R.string.app_name));

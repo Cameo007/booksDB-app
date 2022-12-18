@@ -1,4 +1,4 @@
-package de.pd.lesedatenbank;
+package de.pd.bdb;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lesedatenbank</string>
+    <string name="app_name">booksDB</string>
     <string name="about">Über</string>
     <string name="licences">Open-Source Lizenzen</string>
     <string name="changeEndpoint">API-Endpunkt ändern</string>
@@ -8,7 +8,7 @@
     <string name="password">Passwort</string>
     <string name="login">Anmelden</string>
     <string name="loginTitle">Lesedatenbank - Anmelden</string>
-    <string name="aboutText">Lesedatenbank © by Pascal Dietrich, 2022.</string>
+    <string name="aboutText">booksDB © by Pascal Dietrich, 2022.</string>
     <string name="cancel">Abbrechen</string>
     <string name="apiEndpoint">API-Endpunkt</string>
     <string name="ok">OK</string>
@@ -31,7 +31,7 @@
     <string name="error">"Fehler: "</string>
     <string name="delete">Löschen</string>
     <string name="fabAddBookContentDesc">Buch hinzufügen</string>
-    <string name="introText1">Mit der Lesedatenbank-App können sie ihre gelesenen und noch nicht gelesenen Bücher noch einfacher verwalten! Sie haben Kategorien zB. für verschiedene Autoren oder Genres, die in einer Liste alle Bücher enthalten.</string>
+    <string name="introText1">Mit der booksDB-App können sie ihre gelesenen und noch nicht gelesenen Bücher noch einfacher verwalten! Sie haben Kategorien zB. für verschiedene Autoren oder Genres, die in einer Liste alle Bücher enthalten.</string>
     <string name="noBooks">Sie haben noch keine Bücher hinzugefügt.</string>
     <string name="newPassword">Neues Passwort</string>
     <string name="newUsername">Neuer Benutzername</string>
@@ -42,5 +42,5 @@
     <string name="search">Suchen</string>
     <string name="noCategories">Sie haben noch keine Kategorien angelegt.</string>
     <string name="openSource">Open-Source</string>
-    <string name="openSourceText">Diese App ist Open Source. Der Quellcode ist \u003Ca href=\"https://github.com/Cameo007/Lesedatenbank-app\"\u003Ehier\u003C/a\u003E verfügbar.</string>
+    <string name="openSourceText">Diese App ist Open Source. Der Quellcode ist \\u003Ca href=\"https://github.com/Cameo007/booksDB-app\"\\u003Ehier\\u003C/a\\u003E verfügbar.</string>
 </resources>

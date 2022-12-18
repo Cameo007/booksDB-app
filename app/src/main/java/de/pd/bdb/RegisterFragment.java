@@ -1,4 +1,4 @@
-package de.pd.lesedatenbank;
+package de.pd.bdb;
 
 import android.content.Context;
 import android.content.Intent;
