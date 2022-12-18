@@ -62,7 +62,7 @@ Repository for the lDB android app. The server files are available [here](https:
   
 ## License
 ```
-lDB - Managing read and unread books
+booksDB - Managing read and unread books
 Copyright (C) 2022  Pascal Dietrich
 
 This library is free software; you can redistribute it and/or
