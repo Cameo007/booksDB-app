@@ -1,5 +1,5 @@
-# lDB - Managing read and unread books
-Repository for the lDB android app. The server files are available [here](https://github.com/Cameo007/Lesedatenbank-server/).
+# booksDB - Managing read and unread books
+Repository for the lDB android app. The server files are available [here](https://github.com/Cameo007/bookDB-server/).
 
 ## Libraries
 - [Androidx](https://github.com/androidx/androidx)
